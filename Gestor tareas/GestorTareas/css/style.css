@@ -1,0 +1,205 @@
+/* ==== RESETEO GENERAL ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==== HEADER ==== */
+header {
+    background: linear-gradient(90deg, #934caf, #310a64);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header button {
+    background: white;
+    color: #2c0263;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+header button:hover {
+    background: #29004b;
+}
+
+/* ==== CONTENEDOR ==== */
+.container {
+    flex: 1;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* ==== FORMULARIO ==== */
+.agregarTareas {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.agregarTareas h2 {
+    margin-bottom: 15px;
+    color: #000000;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #4c0e94;
+    padding-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #1e0036;
+}
+
+.agregarTareas button {
+    background: #6a4caf;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.agregarTareas button:hover {
+    background: #48327a;
+}
+
+/* ==== TABLA ==== */
+.listaTareas {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.listaTareas h2 {
+    margin-bottom: 15px;
+    color: #0a050f;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #4d0e96;
+    padding-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #6b31ad;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+/* ...existing code... */
+.completada {
+    background-color: #d4edda; /* Verde claro */
+    text-decoration: line-through;
+}
+/* ...existing code... */
+/* ==== FOOTER ==== */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.9rem;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* ==== MODO OSCURO ==== */
+body.dark {
+    background-color: #1c1c1c;
+    color: #eee;
+}
+
+body.dark header {
+     background: linear-gradient(90deg, #2b0a42, #150322);
+}
+
+body.dark .agregarTareas,
+body.dark .listaTareas {
+    background: #2c2c2c;
+    color: #eee;
+}
+/* ...existing code... */
+body.dark h1,
+body.dark h2,
+body.dark th {
+    color: #fff;
+}
+/* ...existing code... */
+body.dark table {
+    color: #eee;
+}
+
+body.dark table th {
+    background: #444;
+}
+
+body.dark footer {
+    background: #111;
+}
